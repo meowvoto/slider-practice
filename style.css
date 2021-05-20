@@ -1,0 +1,12 @@
+
+.images_container {
+    margin: auto;
+    background-color: lightcoral;
+}
+
+.image {
+    box-sizing: border-box;
+    display: block;
+    height: 50vw;
+    margin: auto;
+}
