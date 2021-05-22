@@ -24,3 +24,11 @@ let images = [
     {url:'https://www.anicoremixgallery.com/wp-content/uploads/2021/03/004_EGO-MELT.jpg',
     title:'EGO-MELT, YONEYAMA MAI'}, 
 ]
+
+function initSlider(images) {
+    images.forEach((image, index) => {
+        let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
+    });
+}
+
+initSlider()
