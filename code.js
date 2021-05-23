@@ -1,17 +1,3 @@
-// let images = document.querySelectorAll(".image");
-// // console.log(images);
-// let sliderImages = [];
-// for (let i = 0; i < images.length; i++) {
-//     let newSliderImage = {
-//         image: images[i],
-//         title: i+1
-//     }
-//     sliderImages.push(newSliderImage)
-// }
-
-// console.log(sliderImages);
-// sliderImages[0].image.style.cssText = "display: block";
-
 let images = [
     {url:'https://www.anicoremixgallery.com/wp-content/uploads/2021/03/8_EGO-GRIN_new.jpg',
     title:'EGO-GRIN, YONEYAMA MAI'}, 

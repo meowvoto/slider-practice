@@ -1,12 +1,27 @@
-/* 
+/* .test {
+    width: 500px;
+    height: 200px;
+} */
+
 .images_container {
     margin: auto;
     background-color: lightcoral;
+    width: 500px;
+    height: 400px;
+    position: relative;
 }
 
 .image {
-    box-sizing: border-box;
-    display: none;
-    height: 50vw;
     margin: auto;
-} */
+    background-color: lightsalmon;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    position: absolute;
+}
+
+.active {
+    opacity: 1;
+}
