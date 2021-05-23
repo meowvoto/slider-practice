@@ -12,7 +12,7 @@ let images = [
 ]
 
 let imagesContainer = document.querySelector(".images_container")
-
+let arrows = document.querySelector(".arrows")
 function initSlider(images) {
     images.forEach((image, index) => {
         let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
