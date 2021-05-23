@@ -25,10 +25,12 @@ let images = [
     title:'EGO-MELT, YONEYAMA MAI'}, 
 ]
 
+let imagesContainer = document.querySelector(".images_container")
+
 function initSlider(images) {
     images.forEach((image, index) => {
         let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
+        imagesContainer.innerHTML += divImage;
     });
 }
-
-initSlider()
+initSlider(images)
