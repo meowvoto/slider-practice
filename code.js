@@ -12,11 +12,34 @@ let images = [
 ]
 
 let imagesContainer = document.querySelector(".images_container")
-let arrows = document.querySelector(".arrows")
+let buttons = document.querySelector(".buttons")
+let button = buttons.querySelectorAll(".button")
 function initSlider(images) {
+    if (!images || !images.length) return;
+
     images.forEach((image, index) => {
         let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
         imagesContainer.innerHTML += divImage;
     });
+
+    // initHighlightButton();
+
+    // function initHighlightButton() {
+    //     button.forEach(buttonElem => {
+    //         buttonElem.addEventListener("mouseover", function() {
+    //             buttonElem.querySelector(".arrow").style.cssText = 'color: hsl(0, 0%, 100%);';
+    //         })
+    //     })
+    // }
+
+
+
+    // function initButtons() {
+    //     let curNumber = imagesContainer.querySelector(".active");
+    //     let nextNumber;
+
+    // }
+
 }
-initSlider(images)
+
+document.addEventListener("DOMContentLoaded", initSlider(images))

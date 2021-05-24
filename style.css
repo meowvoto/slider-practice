@@ -22,9 +22,10 @@
 }
 .arrow {
     margin: auto 20px;
-    color: hsl(0, 0%, 100%, 0.3); // сделать прозрачность 100% при наведении
+    color: hsl(0, 0%, 100%, 0.3); 
     font-size: 20px;
 }
+/* сделать прозрачность 100% при наведении */
 
 .right-arrow {
     text-align: end;
@@ -45,6 +46,7 @@
     background-color:rgba(126, 126, 143, 0);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 
