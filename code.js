@@ -22,23 +22,11 @@ function initSlider(images) {
         imagesContainer.innerHTML += divImage;
     });
 
-    // initHighlightButton();
-
-    // function initHighlightButton() {
-    //     button.forEach(buttonElem => {
-    //         buttonElem.addEventListener("mouseover", function() {
-    //             buttonElem.querySelector(".arrow").style.cssText = 'color: hsl(0, 0%, 100%);';
-    //         })
-    //     })
-    // }
-
-
-
-    // function initButtons() {
-    //     let curNumber = imagesContainer.querySelector(".active");
-    //     let nextNumber;
-
-    // }
+    function initButtons() {
+        let curNumber = +imagesContainer.querySelector(".active").dataset.index;
+        let nextNumber;
+        function { 
+    }
 
 }
 
