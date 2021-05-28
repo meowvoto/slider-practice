@@ -14,6 +14,7 @@ let images = [
 let imagesContainer = document.querySelector(".images_container")
 let buttons = document.querySelector(".buttons")
 let button = buttons.querySelectorAll(".button")
+
 function initSlider(images) {
     if (!images || !images.length) return;
 
@@ -22,10 +23,27 @@ function initSlider(images) {
         imagesContainer.innerHTML += divImage;
     });
 
+    initButtons();
+
     function initButtons() {
         let curNumber = +imagesContainer.querySelector(".active").dataset.index;
         let nextNumber;
-        function { 
+        button.forEach(elem => {
+            elem.addEventListener("click", function() {
+                if (elem.classList.contains("right")) {
+                    nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
+                } else {
+                    nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
+                }
+            }
+            )
+            moveSlider(nextNumber);
+        })
+    }
+
+    function moveSlider(num) {
+        imagesContainer.querySelector(".active").classList.remove("active");
+        imagesContainer.querySelector(".n" + num).classList.add("active");
     }
 
 }
