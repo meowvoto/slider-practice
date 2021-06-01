@@ -18,9 +18,10 @@ function initSlider() {
     let imagesContainer = document.querySelector(".images_container");
     let buttons = document.querySelector(".buttons");
     let button = buttons.querySelectorAll(".button");
-    
+
     initImages();
-    
+    initButtons();
+
     function initImages() {
         images.forEach((image, index) => {
             let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
@@ -32,6 +33,7 @@ function initSlider() {
         let curNumber = +imagesContainer.querySelector(".active").dataset.index;
         let nextNumber;
         button.forEach(elem => {
+            console.log(elem);
             elem.addEventListener("click", function() {
                 if (elem.classList.contains("right")) {
                     nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
