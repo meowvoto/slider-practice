@@ -11,19 +11,22 @@ let images = [
     title:'EGO-MELT, YONEYAMA MAI'}, 
 ]
 
-let imagesContainer = document.querySelector(".images_container")
-let buttons = document.querySelector(".buttons")
-let button = buttons.querySelectorAll(".button")
 
-function initSlider(images) {
+function initSlider() {
     if (!images || !images.length) return;
 
-    images.forEach((image, index) => {
-        let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
-        imagesContainer.innerHTML += divImage;
-    });
-
-    initButtons();
+    let imagesContainer = document.querySelector(".images_container");
+    let buttons = document.querySelector(".buttons");
+    let button = buttons.querySelectorAll(".button");
+    
+    initImages();
+    
+    function initImages() {
+        images.forEach((image, index) => {
+            let divImage = `<div class="image n${index} ${index === 0 ? 'active' : ''}" style="background-image:url(${images[index].url})" data-index="${index}"></div>`
+            imagesContainer.innerHTML += divImage;
+        });
+    }
 
     function initButtons() {
         let curNumber = +imagesContainer.querySelector(".active").dataset.index;
@@ -35,9 +38,9 @@ function initSlider(images) {
                 } else {
                     nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
                 }
+                moveSlider(nextNumber);
             }
             )
-            moveSlider(nextNumber);
         })
     }
 
@@ -48,4 +51,4 @@ function initSlider(images) {
 
 }
 
-document.addEventListener("DOMContentLoaded", initSlider(images))
+document.addEventListener("DOMContentLoaded", initSlider())
