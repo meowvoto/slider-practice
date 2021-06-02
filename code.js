@@ -16,8 +16,7 @@ function initSlider() {
     if (!images || !images.length) return;
 
     let imagesContainer = document.querySelector(".images_container");
-    let buttons = document.querySelector(".buttons");
-    let button = buttons.querySelectorAll(".button");
+    let button = document.querySelectorAll(".button");
 
     initImages();
     initButtons();

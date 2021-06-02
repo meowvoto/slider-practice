@@ -1,14 +1,16 @@
-.images_container {
-    margin: auto;
-    background-color: lightcoral;
+.slider {
     width: 500px;
     height: 400px;
     position: relative;
+    margin: auto;
+}
+
+.images_container {
+    background-color: lightcoral;
 }
 
 .image {
     margin: auto;
-    background-color: lightsalmon;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -55,5 +57,5 @@
 .button:hover {
     opacity: 1;
 }
-
+ 
 
