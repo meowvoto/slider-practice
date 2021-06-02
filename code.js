@@ -29,14 +29,17 @@ function initSlider() {
     }
 
     function initButtons() {
-        let curNumber = +imagesContainer.querySelector(".active").dataset.index;
-        let nextNumber;
         button.forEach(elem => {
-            console.log(elem);
             elem.addEventListener("click", function() {
+                let curNumber = +imagesContainer.querySelector(".active").dataset.index;
+                let nextNumber;
                 if (elem.classList.contains("right")) {
+                    console.log("Правая");
+                    console.log(curNumber);
                     nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
                 } else {
+                    console.log(curNumber);
+                    console.log("Левая");
                     nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
                 }
                 moveSlider(nextNumber);
